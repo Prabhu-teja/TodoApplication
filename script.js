@@ -11,11 +11,14 @@ document.querySelector("#clear").addEventListener("click",()=>{
 function display(){
     let container=document.querySelector("#todos");
     container.innerHTML="";
-    for(let i=1;i<localStorage.length;i++){
-        let div=document.createElement("div");
-        div.className="todo m-2 p-2";
-        div.innerText=localStorage.getItem(i);
-        container.appendChild(div);
+    for(let temp in localStorage){
+        if(!/\D/.test(temp)){
+            let div=document.createElement("div");
+            div.className="todo m-2 p-2";
+            div.innerText=localStorage.getItem(temp);
+            container.appendChild(div);
+        }
+        console.log(temp);
     }
 }
 document.querySelector("#save").addEventListener("click",()=>{
