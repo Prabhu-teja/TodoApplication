@@ -11,14 +11,9 @@ document.querySelector("#clear").addEventListener("click",()=>{
 function display(){
     let container=document.querySelector("#todos");
     container.innerHTML="";
-    for(let temp in localStorage){
-        if(!/\D/.test(temp)){
-            let div=document.createElement("div");
-            div.className="todo m-2 p-2";
-            div.innerText=localStorage.getItem(temp);
-            container.appendChild(div);
-        }
-        console.log(temp);
+    let index=localStorage.getItem("index");
+    for(let i=1;i<=index;i++){
+        container.innerHTML+=`<div class="todo m-2 p-2">${localStorage.getItem(i)}</div>`
     }
 }
 document.querySelector("#save").addEventListener("click",()=>{
