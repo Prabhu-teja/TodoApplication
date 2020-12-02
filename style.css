@@ -1,0 +1,14 @@
+body {
+	background-color: black;
+	background-image: url("https://flatuicolors.com/static/img/stars-opacity.0979c1.svg");
+}
+.todo {
+	background-color: white;
+	cursor: pointer;
+	color: black;
+}
+.todo:hover {
+	background-color: transparent;
+	color: white;
+	box-shadow: 0 0 10px 2px dodgerblue;
+}
