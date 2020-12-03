@@ -12,3 +12,6 @@ body {
 	color: white;
 	box-shadow: 0 0 10px 2px dodgerblue;
 }
+.btn:hover {
+	color: white;
+}
